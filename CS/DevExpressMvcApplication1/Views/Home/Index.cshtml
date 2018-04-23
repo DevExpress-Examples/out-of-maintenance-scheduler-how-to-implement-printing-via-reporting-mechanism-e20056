@@ -1,0 +1,19 @@
+﻿@model SchedulerDataObject
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>MVC Scheduler Extension</h2>
+
+@Html.Partial("SchedulerPartial", Model)
+
+<div style="height: 100px">
+    @Html.DevExpress().Button( settings => {
+        settings.Name = "ShowReport";
+        settings.Text = "Show Preview";
+        settings.ClientSideEvents.Click = "ShowPopupControl";
+    }).GetHtml()
+</div>
+
+@Html.Partial("ReportPopupPartial")
+
