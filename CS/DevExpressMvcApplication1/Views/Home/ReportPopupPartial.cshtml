@@ -1,0 +1,21 @@
+@Html.DevExpress().PopupControl(settings => {
+    settings.Name = "popupControl";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "ReportPopupPartial" };
+    settings.CloseAction = CloseAction.OuterMouseClick;
+    settings.PopupVerticalAlign = PopupVerticalAlign.WindowCenter;
+    settings.PopupHorizontalAlign = PopupHorizontalAlign.WindowCenter;
+    settings.Height = System.Web.UI.WebControls.Unit.Pixel(500);
+    settings.Width = System.Web.UI.WebControls.Unit.Pixel(1000);
+    settings.ShowPageScrollbarWhenModal = true;
+    settings.ShowLoadingPanel = false;
+    settings.Modal = true;
+    settings.ScrollBars = System.Web.UI.WebControls.ScrollBars.Vertical;
+    settings.LoadContentViaCallback = LoadContentViaCallback.OnFirstShow;
+    settings.ClientSideEvents.EndCallback = "OnEndCallback";
+    settings.ClientSideEvents.CloseUp = "OnPopupClose";
+    settings.PopupElementID = "ShowReport";
+    settings.HeaderText = "Report Preview";
+    settings.SetContent(() => {
+        @Html.RenderAction("ReportView", "Home");
+    });
+}).GetHtml()
