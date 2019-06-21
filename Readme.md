@@ -9,6 +9,9 @@
 * [scripts.js](./CS/DevExpressMvcApplication1/Scripts/scripts.js) (VB: [scripts.js](./VB/DevExpressMvcApplication1/Scripts/scripts.js))
 <!-- default file list end -->
 # Scheduler - How to implement printing via reporting mechanism
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e20056/)**
+<!-- run online end -->
 
 
 <p>This example illustrates how to create a Scheduler Report for the current Scheduler located on a page and use the Report Preview control to display and print it.</p>
