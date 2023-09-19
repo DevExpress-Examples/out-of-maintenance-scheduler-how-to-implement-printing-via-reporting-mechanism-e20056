@@ -1,9 +1,0 @@
-@Html.DevExpress().ReportViewer(settings =>{
-    settings.Name = "reportViewer1";
-    settings.Report = (DevExpress.XtraReports.UI.XtraReport)ViewData["Report"];
-    settings.ShowLoadingPanelImage = true;
-    settings.CallbackRouteValues = new { Controller="Home", Action="ReportViewerPartial" };
-    settings.ExportRouteValues = new { Controller="Home", Action="ExportReportViewerPartial" };
-    settings.ClientSideEvents.BeginCallback = "ReportViewerBeginCallback";
-    }).GetHtml()
-    
